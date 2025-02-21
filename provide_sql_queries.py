@@ -1,7 +1,7 @@
 #### Question 1: What is the percentage of sales in the Health & Wellness category by generation?
 
-#### I am going to classify users into generations based on their birth years.
-#### Then I will calculate total sales for each generation and the percentage of sales within the "Health & Wellness" category.
+# I am going to classify users into generations based on their birth years.
+# Then I will calculate total sales for each generation and the percentage of sales within the "Health & Wellness" category.
 
 WITH user_generations AS (
     SELECT 
@@ -50,8 +50,8 @@ ORDER BY s.total_sales DESC;
 
 #### Question 2: What are the top 5 brands by sales among users that have had their account for at least six months?
 
-#### First, I will filter for users who created their accounts at least six months ago.
-#### Then, I will calculate total sales per brand and finally return the top 5 brands by total sales.
+# First, I will filter for users who created their accounts at least six months ago.
+# Then, I will calculate total sales per brand and finally return the top 5 brands by total sales.
 
 WITH eligible_users AS (
     SELECT 
@@ -79,9 +79,9 @@ LIMIT 5;
 
 #### Which is the leading brand in the Dips & Salsa category?
 
-#### Assumptions: We assume that a product falls under the Dips & Salsa category if it appears in the CATEGORY_2 column of the Products Table.
-#### We define the leading brand as the brand with the highest total sales revenue in this category.
-#### It’s also assumed that FINAL_SALE already accounts for multiple units purchased in each transaction. This means if a user purchased multiple units of a product in one transaction, its impact is already reflected in the FINAL_SALE value
+# Assumptions: We assume that a product falls under the Dips & Salsa category if it appears in the CATEGORY_2 column of the Products Table.
+# We define the leading brand as the brand with the highest total sales revenue in this category.
+# It’s also assumed that FINAL_SALE already accounts for multiple units purchased in each transaction. This means if a user purchased multiple units of a product in one transaction, its impact is already reflected in the FINAL_SALE value
 
 
 WITH category_sales AS (
