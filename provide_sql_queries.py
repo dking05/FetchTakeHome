@@ -48,6 +48,14 @@ SELECT
 FROM sales_by_generation s, total_sales t
 ORDER BY s.total_sales DESC;
 
+## Sales in the Health & Wellness category by generation:
+# Gen Z: Total Sales: $0.00 Health & Wellness Sales: $0.00 Percentage: N/A (No sales recorded)
+# Millennials: Total Sales: $103,662.71 Health & Wellness Sales: $59,369.56 Percentage: 57.27%
+# Gen X: Total Sales: $177,017.56 Health & Wellness Sales: $101,384.27 Percentage: 57.27%
+# Boomers: Total Sales: $119,635.47 Health & Wellness Sales: $68,488.84 Percentage: 57.25%
+# Silent Generation: Total Sales: $15.39 Health & Wellness Sales: $1.97 Percentage: 12.80%
+
+
 #### Question 2: What are the top 5 brands by sales among users that have had their account for at least six months?
 
 # First, I will filter for users who created their accounts at least six months ago.
@@ -77,6 +85,9 @@ FROM brand_sales
 ORDER BY total_sales DESC
 LIMIT 5;
 
+## Top 5 brands by sales among users with accounts for at least six months: COCA-COLA - $2,592.10, ANNIE'S HOMEGROWN GROCERY - $2,383.92, DOVE - $2,327.47, BAREFOOT - $2,284.59, ORIBE - $2,085.93
+
+
 #### Which is the leading brand in the Dips & Salsa category?
 
 # Assumptions: We assume that a product falls under the Dips & Salsa category if it appears in the CATEGORY_2 column of the Products Table.
@@ -99,3 +110,6 @@ SELECT
 FROM category_sales
 ORDER BY total_sales DESC
 LIMIT 1;
+
+## Leading brand in the Dips & Salsa category: TOSTITOS with total sales of $496.65
+
